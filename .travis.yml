@@ -13,9 +13,11 @@ script:
 - git clone https://github.com/daggerok/spring-cloud-examples.git $root/0.3.0
 - cd $root/0.3.0
 - bash gradlew asciidoctor
+- ls -la $root/0.3.0/docs
 # 0.2.2
 - export root=$(pwd)
 - git clone https://github.com/daggerok/akka-examples.git $root/0.2.2
+- ls -la $root/0.2.2/docs
 - cd $root/0.2.2
 - bash gradlew clean build asciidoctor
 - bash gradlew clean docs -b docs/asciidoc.gradle
