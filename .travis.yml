@@ -13,13 +13,15 @@ script:
 - git clone https://github.com/daggerok/spring-cloud-examples.git $root/0.3.0
 - cd $root/0.3.0
 - bash gradlew asciidoctor
-- ls -lah $root/0.3.0/docs/build/gitPublish
+- ls -lah $root/0.3.0/docs/build
+- ls -lah $root/0.3.0/docs/build/asciidoctor
 # 0.2.2
 - export root=$(pwd)
 - git clone https://github.com/daggerok/akka-examples.git $root/0.2.2
 - ls -lah $root/0.2.2/docs
 - cd $root/0.2.2
 - bash gradlew clean build asciidoctor
-- ls -lah $root/0.2.2/docs/build/gitPublish
+- ls -lah $root/0.2.2/docs/build
+- ls -lah $root/0.2.2/docs/build/asciidoctor
 - bash gradlew clean docs -b docs/asciidoc.gradle
 - ls -lah $root/0.2.2/asciidoctor-docs
