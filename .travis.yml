@@ -5,20 +5,21 @@ language: java
 jdk: oraclejdk8
 install: true
 before_install:
-- sudo apt update -y || true
-- sudo apt install -y --no-install-recommends git bash
+- sudo apt update -y || true >/dev/null 2>&1
+- sudo apt install -y --no-install-recommends git bash >/dev/null 2>&1
 script:
 # 0.3.0
 - export root=$(pwd)
 - git clone https://github.com/daggerok/spring-cloud-examples.git $root/0.3.0
 - cd $root/0.3.0
 - bash gradlew asciidoctor
-- ls -lah $root/0.3.0/docs
+- ls -lah $root/0.3.0/docs/build/gitPublish
 # 0.2.2
 - export root=$(pwd)
 - git clone https://github.com/daggerok/akka-examples.git $root/0.2.2
 - ls -lah $root/0.2.2/docs
 - cd $root/0.2.2
 - bash gradlew clean build asciidoctor
+- ls -lah $root/0.2.2/docs/build/gitPublish
 - bash gradlew clean docs -b docs/asciidoc.gradle
 - ls -lah $root/0.2.2/asciidoctor-docs
