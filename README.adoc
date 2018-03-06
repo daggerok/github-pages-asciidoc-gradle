@@ -1,0 +1,5 @@
+= Asciidoctor Gradle GitHub Pages
+
+* link:https://github.com/daggerok/spring-cloud-examples/tree/master/docs[Asciidoctor Gradle GitHub Pages example (+ git push using org.ajoberstar.git-publish 0.3.0)]
+* link:https://github.com/daggerok/akka-examples/blob/master/docs/build.gradle[Asciidoctor Gradle GitHub Pages example (+ git push using org.ajoberstar.git-publish 0.2.2)]
+* link:https://github.com/daggerok/akka-examples/blob/master/docs/asciidoc.gradle[Asciidoctor Gradle GitHub Pages example (no push]
